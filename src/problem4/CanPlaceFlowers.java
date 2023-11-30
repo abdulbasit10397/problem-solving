@@ -1,7 +1,7 @@
 package problem4;
 
 /** Works but a very bad solution. A lot of patches */
-public class CanPaceFlowersProblem {
+public class CanPlaceFlowers {
     public static void main(String[] args) {
         int[] flowerbed = {0,0};
         System.out.println(canPlaceFlowers(flowerbed, 2));
