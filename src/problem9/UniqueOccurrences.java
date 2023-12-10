@@ -5,6 +5,11 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Not adding an optimized solution because this solution beats
+ * Performance: 98.35% of users with Java
+ * Memory: 74.80% of users with Java
+ */
 public class UniqueOccurrences {
     public static void main (String[] args) {
         int[] arr = {-3,0,1,-3,1,1,1,-3,10,0};
