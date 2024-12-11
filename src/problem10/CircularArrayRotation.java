@@ -8,13 +8,18 @@ import java.util.List;
 
 /**
  * Solution Approach:
+ * Approach 1: Iterate over array till k times and shift elements
  * for k = 2, it will be
  * 3, 4, 5, 6 -> 6, 3, 4, 5 -> 5, 6, 3, 4
  *
  * a = 3, 4, 5, 6
  * a = 4, 3, 5, 6 -> i = 0
  * a = 5, 3, 4, 6 -> i = 2
- * a = 6, 3, 4, 5 -> i = 3 */
+ * a = 6, 3, 4, 5 -> i = 3
+ *
+ *
+ * Approach 2: Arithmetically calculate the rotated index
+ */
 public class CircularArrayRotation {
 
     public static List<Integer> circularArrayRotationApproach1(List<Integer> a, int k, List<Integer> queries) {
