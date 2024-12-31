@@ -1,4 +1,4 @@
-package dsa.problem1;
+package dsa.linkedlist.problem1;
 
 import java.io.IOException;
 
