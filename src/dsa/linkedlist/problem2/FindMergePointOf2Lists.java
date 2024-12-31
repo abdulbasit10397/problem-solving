@@ -81,6 +81,40 @@ public class FindMergePointOf2Lists {
         return 0;
     }
 
+
+    /**
+     * Basic Idea:
+     * * The two lists may have different lengths, making their merge point
+     * * hard to find by a simple comparison of nodes.
+     * * To overcome this, the solution uses two pointers (head1_curr and head2_curr)
+     * * that traverse the lists. When one pointer reaches the end of its list,
+     * * it switches to the head of the other list.
+     *
+     * Purpose of Switching:
+     * * By switching, the two pointers will eventually "sync up" and traverse the same distance,
+     * * ensuring they meet at the merge point, even if the lists are of different lengths.
+     */
+    static int findMergeNodeOptimized(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        SinglyLinkedListNode temp1 = head1;
+        SinglyLinkedListNode temp2 = head2;
+
+        while(temp1 != temp2){
+            if(temp1.next == null){
+                temp1 = head2;
+            }else{
+                temp1= temp1.next;
+            }
+            if(temp2.next == null){
+                temp2 = head1;
+            }else{
+                temp2 = temp2.next;
+            }
+
+        }
+
+        return temp2.data;
+    }
+
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
